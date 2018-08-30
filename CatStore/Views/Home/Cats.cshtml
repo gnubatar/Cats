@@ -1,0 +1,22 @@
+﻿@model CatStore.Models.Cats
+@{
+    ViewBag.Title = "cats";
+}
+
+<h2>cats</h2>
+
+
+@foreach (var cat in Model.cats)
+{
+    <ul>
+
+        <li>Namn:@cat.name</li>
+        <li>Pris:@cat.price</li>
+        <li> @Html.ActionLink("Lägg i varukorgen", "Order", new { catId = cat.id })</li>
+
+    </ul>
+}
+
+<h1>@ViewBag.Message</h1> 
+
+<h2>@Html.ActionLink("till varukorg", "OrderKart", "Order")</h2>

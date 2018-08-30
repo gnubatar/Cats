@@ -1,0 +1,19 @@
+﻿@model CatStore.Models.Cats 
+@{
+    ViewBag.Title = "Success";
+}
+
+<h2>Grattis</h2>
+<p>@ViewBag.Message</p>
+
+<h4>Kvitto</h4>
+<dl class="dl-horizontal">
+    @foreach (var cat in Model.cats)
+    {
+        <dt>@cat.name :</dt>
+        <dd>@cat.price sek</dd>
+
+    }
+    <dt>Totalt pris: @ViewBag.totalPrice</dt>
+    <dt>Status: @ViewBag.status</dt>
+</dl>

@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1> Katter</h1>
+    <h1>@ViewBag.shoppingkartError</h1>
+    <h1>@ViewBag.ordersError</h1>
+    @Html.ActionLink("Katter här", "cats", "Home")
+</div>
+

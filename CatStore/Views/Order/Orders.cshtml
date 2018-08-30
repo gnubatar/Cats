@@ -1,0 +1,10 @@
+﻿@model IEnumerable<CatStore.Models.ResultOrder>
+    @{
+        ViewBag.Title = "Orders";
+    }
+
+    <h2>Orders</h2>
+@foreach (var order in Model)
+{
+    <p>@Html.ActionLink(order.orderId,"Receipt", new { orderId = order.orderId })   @order.success</p>
+}

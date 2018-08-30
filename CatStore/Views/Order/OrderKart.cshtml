@@ -1,0 +1,18 @@
+﻿@model CatStore.Models.Cats
+@{
+    ViewBag.Title = "OrderKart";
+}
+
+<h2>Varukorg</h2>
+<h1>@ViewBag.Errormsg</h1>
+<dl class="dl-horizontal">
+@foreach(var cat in Model.cats)
+{
+    <dt>@cat.name</dt>
+    <dd>@cat.price</dd>
+    
+}
+    <dt>Totalt pris: @Model.totalPrice()</dt>
+    </dl>
+
+@Html.ActionLink("Bekräfta order" ,"Order")
